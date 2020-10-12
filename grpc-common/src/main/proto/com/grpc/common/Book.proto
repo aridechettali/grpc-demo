@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package com.grpc.demo.common;
+import "Author.proto";
+
+message Book {
+  BookId id = 1;
+  string name =2;
+  int32 pageCount = 3;
+  Author author = 4;
+}
+
+message BookId {
+  int32 id = 1;
+}
+
+service BookServices {
+  // Sends a greeting
+  rpc bookById (BookId) returns (Book) {}
+  rpc findAllBooks (BookId) returns (stream Book) {}
+}

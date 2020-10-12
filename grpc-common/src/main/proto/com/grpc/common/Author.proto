@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package com.grpc.demo.common;
+
+message Author {
+  int64 id = 1;
+  string firstName =2;
+  string lastName = 3;
+}

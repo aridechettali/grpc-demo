@@ -1,23 +1,22 @@
 package com.grpc.demo.client;
 
+import com.grpc.demo.common.AuthorOuterClass.Author;
+import com.grpc.demo.common.BookOuterClass.Book;
+import io.grpc.ManagedChannel;
+import io.grpc.ManagedChannelBuilder;
 
+public class ClientMain {
+    public static void main(String[] args) {
 
-import com.grpc.demo.common.BookOuterClass.*;
+        ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost",9090).usePlaintext().build();
 
-import java.util.Iterator;
+        BookServiceClient bookServiceClient = new BookServiceClient(channel);
+        Book book = bookServiceClient.getBookById(101);
+        System.out.println(book);
 
-public class ClientMain {public static void main(String[] args) {
+        AuthorServiceClient authorServiceClient = new AuthorServiceClient(channel);
+        Author author = authorServiceClient.getAuthorById(999);
+        System.out.println(author);
 
-    BookServiceClient bookServiceClient = new BookServiceClient();
-
-
-    Book book = bookServiceClient.getBookById(1234);
-    System.out.println(book);
-
-    Iterator<Book> books = bookServiceClient.findAllBooks();
-    while(books.hasNext()) {
-        System.out.println(books.next());
     }
-}
-
 }

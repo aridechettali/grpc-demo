@@ -1515,11 +1515,9 @@ public final class BookOuterClass {
       "demo.common.BookId\022\014\n\004name\030\002 \001(\t\022\021\n\tpage" +
       "Count\030\003 \001(\005\022,\n\006author\030\004 \001(\0132\034.com.grpc.d" +
       "emo.common.Author\"\024\n\006BookId\022\n\n\002id\030\001 \001(\0052" +
-      "\244\001\n\014BookServices\022F\n\010bookById\022\034.com.grpc." +
-      "demo.common.BookId\032\032.com.grpc.demo.commo" +
-      "n.Book\"\000\022L\n\014findAllBooks\022\034.com.grpc.demo" +
-      ".common.BookId\032\032.com.grpc.demo.common.Bo" +
-      "ok\"\0000\001b\006proto3"
+      "V\n\014BookServices\022F\n\010bookById\022\034.com.grpc.d" +
+      "emo.common.BookId\032\032.com.grpc.demo.common" +
+      ".Book\"\000b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

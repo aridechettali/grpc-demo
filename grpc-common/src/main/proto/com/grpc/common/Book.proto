@@ -15,7 +15,5 @@ message BookId {
 }
 
 service BookServices {
-  // Sends a greeting
   rpc bookById (BookId) returns (Book) {}
-  rpc findAllBooks (BookId) returns (stream Book) {}
 }
